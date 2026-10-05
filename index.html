@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="./assets/geral/duck-icon.png" />
   <title>Rafaella Cruz | Portfólio</title>
   <meta name="description" content="Portfólio de Rafaella Cruz — Tecnóloga em Banco de Dados, desenvolvedora full stack." />
 
@@ -64,12 +65,14 @@
             <span class="skill-badge">☕ Java</span>
             <span class="skill-badge">🌱 Spring Boot</span>
             <span class="skill-badge">🔐 Spring Security</span>
+            <span class="skill-badge">🐍 Python</span>
+            <span class="skill-badge">🎸 Django</span>
+            <span class="skill-badge">🏛️ Data Warehouse</span>
+            <span class="skill-badge">🐳 Docker</span>
             <span class="skill-badge">🖖 Vue.js</span>
             <span class="skill-badge">🖥️ JavaFX</span>
             <span class="skill-badge">🐬 MySQL</span>
             <span class="skill-badge">🐘 PostgreSQL</span>
-            <span class="skill-badge">⚡ Supabase</span>
-            <span class="skill-badge">🗄️ Vertabelo</span>
             <span class="skill-badge">🎨 Figma</span>
             <span class="skill-badge">🖌️ Canva</span>
             <span class="skill-badge">🧭 Scrum</span>
@@ -125,9 +128,9 @@
 
                   <h6 class="section-title">Contribuições Pessoais</h6>
                   <div class="contribution-text">
-                    <p>Contribuí na implementação de operações matemáticas básicas e avançadas, incluindo cálculo de juros simples e função de segundo grau (com cálculo do discriminante e tratamento dos casos sem raízes reais). Para cada operação, o cuidado foi garantir que a entrada do usuário fosse tratada corretamente antes de qualquer processamento, evitando resultados inconsistentes ou erros silenciosos. Estruturei as funções de forma isolada para facilitar a integração ao menu principal desenvolvido pelo time, seguindo o padrão modular adotado pelo grupo.</p>
-                    <p>Em uma aplicação de terminal, onde toda a interação depende do que o usuário digita, garantir a validação das entradas é fundamental para a robustez do sistema. Trabalhei com verificações de tipo numérico, prevenção de operações matematicamente inválidas (como divisão por zero e raiz quadrada de negativos) e exibição de mensagens de erro objetivas. Cada função validava os dados antes de executar o cálculo, o que reduzia retrabalho causado por entradas inesperadas.</p>
-                    <p>Com múltiplos integrantes desenvolvendo funcionalidades em paralelo, a consistência do código se tornava um risco real de integração. Contribuí na definição e adoção de convenções de nomenclatura, organização modular das funções e separação de responsabilidades entre os arquivos, reduzindo conflitos durante os merges e tornando o projeto mais legível para qualquer integrante do time.</p>
+                    <p>Na fase de prototipação em VisualG, implementei as operações de soma e subtração. Quando o time migrou o projeto para TypeScript, assumi a reescrita da subtração, que passou por várias iterações: corrigi erros no cálculo com números reais, tratei os casos de <code>NaN</code> com laços que repetem a pergunta até o usuário informar um número válido, e formatei o resultado para exibir casas decimais apenas quando o valor não é inteiro. Também ajustei a tipagem do Node e a localização dos arquivos para que a operação compilasse corretamente no build.</p>
+                    <p>Além da minha operação, trabalhei na experiência de uso do terminal como um todo. Melhorei a estrutura do menu principal e a exibição dos submenus, corrigi chamadas duplicadas de função e nomes de arquivos referenciados no menu, e reorganizei a estrutura de pastas do projeto, separando as versões em VisualG e TypeScript. Na reta final, padronizei os textos exibidos ao usuário e documentei esse padrão em um PDF de referência para o time, para que todas as operações falassem a mesma língua.</p>
+                    <p>Fui a principal responsável pelo README do repositório, com mais de vinte atualizações ao longo do semestre: capa e elementos visuais, backlog do produto, validações feitas com o cliente e a seção de boas práticas. Nela defini as convenções do time: nomenclatura em camelCase, nomes e commits em inglês e um padrão de mensagens de commit (emoji, tipo e descrição) baseado em um guia que publiquei no meu próprio GitHub.</p>
                   </div>
 
                   <details class="skills-details">
@@ -137,22 +140,28 @@
                       <li><span>VisualG</span><span>Avançado</span></li>
                       <li><span>TypeScript</span><span>Intermediário</span></li>
                       <li><span>Git / GitHub</span><span>Intermediário</span></li>
-                      <li><span>Scrum</span><span>Intermediário</span></li>
+                      <li><span>Documentação Técnica (Markdown)</span><span>Avançado</span></li>
                     </ul>
                   </details>
+                  <div class="contribution-text">
+                    <p><strong>Lógica de Programação e VisualG:</strong> Usei o VisualG para estruturar a lógica das operações antes de qualquer sintaxe real. Foi nessa etapa que pensei em como acumular valores em uma subtração com quantidade variável de números, raciocínio que depois levei quase sem mudanças para o TypeScript.</p>
+                    <p><strong>TypeScript:</strong> A reescrita da subtração me obrigou a lidar com tipos de verdade: conversão de entrada com <code>parseFloat</code>, verificação com <code>isNaN</code> e diferença entre inteiros e decimais na saída. Os commits de correção de bugs e de tipos do Node mostram que o aprendizado veio de errar, depurar e ajustar.</p>
+                    <p><strong>Git / GitHub:</strong> Foi meu primeiro projeto versionado em equipe, com mais de 80 commits meus no repositório. Além de usar a ferramenta, ajudei a definir como o time a usaria, ao propor o padrão de commits adotado pelo grupo.</p>
+                    <p><strong>Documentação Técnica:</strong> O README foi a principal vitrine do projeto para o cliente e para a banca. Mantê-lo atualizado a cada sprint, com backlog, validações e boas práticas, me ensinou a escrever documentação para quem não participou do desenvolvimento.</p>
+                  </div>
 
                   <details class="skills-details">
                     <summary>Soft Skills</summary>
                     <ul class="skill-level-list">
                       <li><span>Trabalho em Equipe</span><span>Intermediário</span></li>
-                      <li><span>Adaptação ao Scrum</span><span>Intermediário</span></li>
+                      <li><span>Organização</span><span>Intermediário</span></li>
                       <li><span>Proatividade</span><span>Intermediário</span></li>
                     </ul>
                   </details>
                   <div class="contribution-text">
-                    <p><strong>Trabalho em Equipe:</strong> Aprendi a colaborar ativamente com os integrantes do grupo durante a divisão de tarefas e integração das funcionalidades. Como era o primeiro projeto com desenvolvimento em equipe, entender como alinhar contribuições individuais sem gerar conflitos ou retrabalho foi um aprendizado prático constante ao longo das sprints.</p>
-                    <p><strong>Adaptação ao Scrum:</strong> Tive meu primeiro contato com a metodologia ágil SCRUM, aprendendo a organizar o trabalho em sprints com objetivos e entregas definidas. Essa estrutura tornou o desenvolvimento mais previsível e ajudou o time a manter o foco nas prioridades de cada ciclo.</p>
-                    <p><strong>Proatividade:</strong> Busquei contribuir além das tarefas que me foram designadas, auxiliando na integração de funcionalidades e colaborando com colegas que encontravam dificuldades em suas entregas. Essa postura ajudou a manter o ritmo do time mesmo quando surgiram imprevistos.</p>
+                    <p><strong>Trabalho em Equipe:</strong> Como era o primeiro projeto com desenvolvimento em equipe, o maior risco era cada um programar de um jeito. As convenções de nomenclatura e de commits que escrevi no README foram uma forma de criar acordos comuns e facilitar a integração das operações de todos no mesmo menu.</p>
+                    <p><strong>Organização:</strong> Reorganizei a estrutura de pastas do projeto e padronizei os textos da aplicação em um documento de referência. São tarefas que não entregam uma funcionalidade nova, mas tornaram o projeto mais fácil de navegar e mais coerente para quem usava.</p>
+                    <p><strong>Proatividade:</strong> Assumi a documentação e a padronização sem que fossem tarefas do backlog. Também corrigi problemas que afetavam o projeto todo, como chamadas duplicadas e nomes de arquivos errados no menu, e não só os da minha própria operação.</p>
                   </div>
                 </div>
               </div>
@@ -202,34 +211,40 @@
 
                   <h6 class="section-title">Contribuições Pessoais</h6>
                   <div class="contribution-text">
-                    <p>Atuei no desenvolvimento das telas da aplicação desktop com JavaFX, implementando a interface de avaliação e os fluxos de navegação entre os módulos do sistema. Trabalhei na construção de formulários para preenchimento das avaliações e na exibição organizada das informações para o usuário. O cuidado com os fluxos de navegação foi importante para garantir que o sistema fosse intuitivo mesmo para avaliadores que o utilizassem pela primeira vez.</p>
-                    <p>Contribuí na implementação das funcionalidades relacionadas ao preenchimento e visualização das avaliações. Isso envolveu a lógica de cálculo de médias ponderadas por critério e a exibição dos resultados individuais de cada integrante de forma clara, permitindo que professores e líderes tomassem decisões com base em informações confiáveis.</p>
-                    <p>Participei da modelagem das entidades do sistema e da integração com o banco de dados relacional em MySQL, considerando os relacionamentos entre usuários, grupos, critérios, sprints e avaliações, e garantindo integridade referencial. Trabalhei com consultas SQL eficientes para que os relatórios fossem gerados sem lentidão mesmo com volumes maiores de dados.</p>
+                    <p>Desenvolvi o módulo de semestres de ponta a ponta: as telas FXML de cadastro, edição e gerenciamento, seus controllers, a classe de modelo <code>Semestre</code> e o <code>SemestreDAO</code>, com as operações de inserção, consulta e atualização em MySQL via JDBC e <code>PreparedStatement</code>. Também atualizei a classe de critérios de avaliação e ajustei os DAOs de usuários e equipes para atender às novas telas.</p>
+                    <p>Fui responsável pela navegação e pela identidade visual do sistema. Construí os menus do professor e do aluno, padronizei o layout de todas as telas com uma folha de estilos compartilhada, adicionei ícones, logos e efeitos visuais, e defini a tela inicial do aluno. Implementei também a funcionalidade de atualização de senha, acessível pelo link "Esqueci minha senha" na tela de login, e corrigi o fluxo que reabria o login ao fechar o menu do professor.</p>
+                    <p>Na entrega final, cuidei da distribuição do sistema. Gerei o executável <code>.jar</code> e uma versão <code>.exe</code> com ícone usando Launch4j, escrevi o manual de instalação e o manual do usuário, e corrigi o download do manual em PDF dentro da aplicação, que passou a ler o arquivo como recurso interno via <code>InputStream</code> para funcionar também quando o sistema roda empacotado.</p>
                   </div>
 
                   <details class="skills-details">
                     <summary>Hard Skills</summary>
                     <ul class="skill-level-list">
                       <li><span>Java</span><span>Intermediário</span></li>
-                      <li><span>JavaFX</span><span>Intermediário</span></li>
-                      <li><span>MySQL</span><span>Intermediário</span></li>
+                      <li><span>JavaFX + FXML + CSS</span><span>Avançado</span></li>
+                      <li><span>MySQL + JDBC (padrão DAO)</span><span>Intermediário</span></li>
+                      <li><span>Empacotamento e distribuição (.jar / .exe)</span><span>Intermediário</span></li>
                       <li><span>Git / GitHub</span><span>Intermediário</span></li>
-                      <li><span>Scrum (Desenvolvedora)</span><span>Intermediário</span></li>
                     </ul>
                   </details>
+                  <div class="contribution-text">
+                    <p><strong>Java:</strong> Trabalhei em todas as camadas do módulo de semestres (modelo, DAO e controllers) e nos controllers de menu e login. Foi meu primeiro contato com uma aplicação orientada a objetos organizada em pacotes e com o sistema de módulos do Java (<code>module-info.java</code>), que precisei ajustar para expor cada novo controller ao JavaFX.</p>
+                    <p><strong>JavaFX + FXML + CSS:</strong> É a habilidade com mais evidências no projeto: dezenas de commits em views, menus e estilos. Separar a estrutura da tela (FXML), o comportamento (controller) e a aparência (CSS) me deu uma base que reaproveitei diretamente no frontend web dos semestres seguintes.</p>
+                    <p><strong>MySQL + JDBC:</strong> No <code>SemestreDAO</code>, escrevi as consultas SQL e usei <code>PreparedStatement</code> com parâmetros, o que evita SQL Injection, e chaves geradas automaticamente para recuperar o ID do registro inserido. Foi a primeira vez que conectei uma interface a um banco relacional real.</p>
+                    <p><strong>Empacotamento e distribuição:</strong> Fazer o sistema rodar fora da IDE trouxe problemas que não apareciam no desenvolvimento, como arquivos que deixam de ser encontrados quando estão dentro do <code>.jar</code>. Resolver o download do manual em PDF me ensinou a diferença entre ler um arquivo do disco e ler um recurso empacotado.</p>
+                  </div>
 
                   <details class="skills-details">
                     <summary>Soft Skills</summary>
                     <ul class="skill-level-list">
-                      <li><span>Organização</span><span>Intermediário</span></li>
-                      <li><span>Comunicação Técnica</span><span>Intermediário</span></li>
-                      <li><span>Colaboração</span><span>Intermediário</span></li>
+                      <li><span>Atenção à Experiência do Usuário</span><span>Intermediário</span></li>
+                      <li><span>Comunicação Escrita</span><span>Intermediário</span></li>
+                      <li><span>Comprometimento com a Entrega</span><span>Avançado</span></li>
                     </ul>
                   </details>
                   <div class="contribution-text">
-                    <p><strong>Organização:</strong> Com um sistema de maior complexidade do que o do semestre anterior, desenvolvi mais organização para lidar com funcionalidades interligadas e manter clareza sobre o que havia sido feito e o que ainda precisava ser implementado. Essa habilidade foi essencial para cumprir os prazos de cada sprint sem acumular débito técnico.</p>
-                    <p><strong>Comunicação Técnica:</strong> Aprendi a comunicar dúvidas, decisões técnicas e bloqueios de forma clara para o time. Em um projeto com separação entre Product Owner e desenvolvedores, foi importante traduzir problemas de implementação em linguagem compreensível para quem não estava no código, e vice-versa.</p>
-                    <p><strong>Colaboração:</strong> Atuei em conjunto com os demais desenvolvedores do time para garantir que as funcionalidades se integrassem corretamente ao final de cada sprint. Quando surgiram divergências de abordagem, o caminho foi alinhar em conjunto ao invés de cada um seguir em direções diferentes.</p>
+                    <p><strong>Atenção à Experiência do Usuário:</strong> Grande parte dos meus commits foi de padronização de telas, ajustes de layout e nomes de botões. Busquei que professores e alunos navegassem pelo sistema sem estranhar mudanças de estilo entre uma tela e outra, e que pudessem recuperar a senha sem depender de outra pessoa.</p>
+                    <p><strong>Comunicação Escrita:</strong> Escrevi os manuais de instalação e do usuário, que transformam um sistema técnico em instruções que qualquer professor consegue seguir. Também deixei o manual acessível de dentro da própria aplicação.</p>
+                    <p><strong>Comprometimento com a Entrega:</strong> Na última semana do projeto, concentrei commits de ajustes finais, geração dos executáveis e correção do layout de login e do download do PDF. Garantir que o produto chegasse instalável nas mãos do cliente foi tão importante quanto as funcionalidades em si.</p>
                   </div>
                 </div>
               </div>
@@ -290,37 +305,41 @@
 
                   <h6 class="section-title">Contribuições Pessoais</h6>
                   <div class="contribution-text">
-                    <p>Na 1ª sprint, fui responsável por definir a paleta de cores e a identidade visual do projeto utilizando o Canva. Após essa definição, aceitei o desafio de aprender o Figma para transformar a identidade visual em protótipos navegáveis, criando wireframes das telas principais e mapeando os fluxos de navegação. Essa prototipação guiou o desenvolvimento do frontend e antecipou discussões de UX, reduzindo retrabalho nas sprints seguintes.</p>
-                    <p>Ainda na 1ª sprint, assumi o desenvolvimento dos componentes estruturais da interface: a sidebar de navegação e o header da aplicação. Além de estilizar esses elementos, me preocupei em torná-los reutilizáveis para que o restante do time pudesse incorporá-los nas demais telas sem precisar reimplementar a estrutura de layout.</p>
-                    <p>Trabalhei com a criação e configuração das entidades no banco de dados PostgreSQL hospedado no Supabase, com foco nas tabelas de registros de ponto e histórico de alterações. A modelagem considerou a necessidade de rastrear cada modificação feita em um registro — quem alterou, quando e qual era o valor anterior. Além da estrutura das tabelas, configurei as permissões e políticas de acesso no Supabase.</p>
-                    <p>Contribuí no desenvolvimento das classes de domínio, services e controllers no backend com Java Spring Boot, com foco principal na funcionalidade de histórico de pontos. Implementei os endpoints responsáveis pela criação de novos registros, listagem dos pontos por funcionário e período, e registro de alterações com dados de auditoria.</p>
+                    <p>Na 1ª sprint, fui responsável por definir a paleta de cores e a identidade visual do projeto utilizando o Canva. Após essa definição, aceitei o desafio de aprender o Figma para transformar a identidade visual em protótipos navegáveis, criando wireframes das telas principais e mapeando os fluxos de navegação. No código, apliquei essa identidade nos componentes estruturais da interface em Vue.js: estilizei e refatorei a sidebar, o header, o layout administrativo e os botões reutilizáveis de criação e relatório, além das telas de empresas e funcionários.</p>
+                    <p>No backend, construí o módulo de registros de ponto em Java Spring Boot, camada por camada: entidade, DTO, converter, repository, service e controller. Corrigi a consulta JPQL de registros por funcionário para tratar períodos com datas nulas e a tipagem dos parâmetros, e configurei o fuso horário padrão da aplicação para <code>America/Sao_Paulo</code>, essencial em um sistema em que o horário exato do ponto define o salário. Depois, adicionei o endpoint de exclusão e passei a registrar automaticamente a data da última alteração com <code>@LastModifiedDate</code>.</p>
+                    <p>Na funcionalidade de histórico de alterações, criei a entidade, o repository, o DTO, o converter e o service do histórico, e refatorei o service de registros de ponto para gravar uma entrada no histórico a cada edição. Para saber quem fez a alteração, implementei a extração do e-mail do usuário a partir do token JWT recebido no cabeçalho de autorização, além da consulta que retorna o histórico completo de um registro. Também revisei as mensagens de erro e os campos da tela de login.</p>
                   </div>
 
                   <details class="skills-details">
                     <summary>Hard Skills</summary>
                     <ul class="skill-level-list">
+                      <li><span>Java Spring Boot (arquitetura em camadas)</span><span>Avançado</span></li>
+                      <li><span>JPA / JPQL + PostgreSQL</span><span>Intermediário</span></li>
+                      <li><span>Spring Security + JWT</span><span>Intermediário</span></li>
                       <li><span>Vue.js</span><span>Intermediário</span></li>
-                      <li><span>Java Spring Boot</span><span>Intermediário</span></li>
-                      <li><span>PostgreSQL</span><span>Intermediário</span></li>
-                      <li><span>Supabase</span><span>Intermediário</span></li>
                       <li><span>Figma</span><span>Intermediário</span></li>
                       <li><span>Canva</span><span>Avançado</span></li>
-                      <li><span>Scrum</span><span>Avançado</span></li>
                     </ul>
                   </details>
+                  <div class="contribution-text">
+                    <p><strong>Java Spring Boot:</strong> Construir o módulo de registros de ponto inteiro, da entidade ao controller, me fez entender por que cada camada existe: o DTO protege o contrato da API, o converter isola o mapeamento e o service concentra a regra de negócio, como a gravação do histórico a cada alteração.</p>
+                    <p><strong>JPA / JPQL + PostgreSQL:</strong> A consulta de pontos por funcionário e período precisava funcionar mesmo sem datas informadas, e corrigir isso exigiu entender como o JPQL trata parâmetros nulos e tipados. A modelagem da tabela de histórico, que guarda quem alterou, quando e o valor anterior, aplicou diretamente o que estudo em Banco de Dados sobre rastreabilidade.</p>
+                    <p><strong>Spring Security + JWT:</strong> Para auditar alterações, precisei ler o token JWT da requisição e extrair dele a identidade do usuário. Também ajustei quais endpoints exigiam autenticação, removendo liberações provisórias usadas durante o desenvolvimento.</p>
+                    <p><strong>Vue.js, Figma e Canva:</strong> Levei a identidade visual criada no Canva e prototipada no Figma para os componentes reais em Vue.js. Ter desenhado as telas antes de codificá-las tornou os ajustes de estilo mais rápidos e consistentes.</p>
+                  </div>
 
                   <details class="skills-details">
                     <summary>Soft Skills</summary>
                     <ul class="skill-level-list">
                       <li><span>Adaptabilidade</span><span>Avançado</span></li>
                       <li><span>Criatividade</span><span>Avançado</span></li>
-                      <li><span>Proatividade</span><span>Avançado</span></li>
+                      <li><span>Atenção às Regras de Negócio</span><span>Avançado</span></li>
                     </ul>
                   </details>
                   <div class="contribution-text">
-                    <p><strong>Adaptabilidade:</strong> Aceitei o desafio de aprender Figma e Vue.js em um contexto onde as entregas da 1ª sprint já dependiam dessas ferramentas. Sem experiência prévia significativa em nenhuma das duas, estudei e apliquei os conceitos diretamente no projeto.</p>
+                    <p><strong>Adaptabilidade:</strong> No mesmo semestre, atuei em design (Canva e Figma), frontend (Vue.js) e backend (Spring Boot), aprendendo Figma e Vue.js com as entregas da 1ª sprint já dependendo deles. Mudar de contexto entre essas frentes sem perder ritmo foi o maior desafio do projeto.</p>
                     <p><strong>Criatividade:</strong> Defini a identidade visual e a proposta de design do projeto, traduzindo o contexto industrial do cliente em uma interface limpa, funcional e visualmente coerente.</p>
-                    <p><strong>Proatividade:</strong> Busquei aprender novas tecnologias e assumir responsabilidades que contribuíssem diretamente com o andamento do projeto — como a identidade visual e os componentes base da interface — sem que essas tarefas estivessem previamente atribuídas a mim de forma formal.</p>
+                    <p><strong>Atenção às Regras de Negócio:</strong> Detalhes como o fuso horário da aplicação, a data da última modificação e o registro de quem alterou cada ponto parecem técnicos, mas existem porque o ponto define o salário do funcionário. Entender o impacto de cada um no cliente orientou as decisões que tomei no backend.</p>
                   </div>
                 </div>
               </div>
@@ -335,7 +354,7 @@
               </h2>
               <div id="sem4Collapse" class="accordion-collapse collapse" aria-labelledby="sem4Heading" data-bs-parent="#semestersAccordion">
                 <div class="accordion-body">
-                  <p>No quarto semestre de 2025, desenvolvemos o <strong>Tráfegou!</strong>, uma aplicação web criada para apoiar o monitoramento contínuo da mobilidade urbana. O sistema consolida indicadores de tráfego por região, atribui níveis de monitoramento de acordo com os dados coletados, gera alertas automáticos em situações críticas e registra protocolos de ação associados a cada nível, apoiando a tomada de decisão por parte dos operadores.</p>
+                  <p>No quarto semestre de 2025, desenvolvemos o <strong>Tráfegou!</strong>, uma aplicação web criada para apoiar o monitoramento contínuo da mobilidade urbana, proposta para atender a Prefeitura de São José dos Campos.O sistema consolida indicadores de tráfego por região, atribui níveis de monitoramento de acordo com os dados coletados, gera alertas automáticos em situações críticas e registra protocolos de ação associados a cada nível, apoiando a tomada de decisão por parte dos operadores.</p>
                   <p>A solução foi construída com arquitetura full stack, utilizando Vue.js 3 com TypeScript no frontend, Spring Boot com Java 17 no backend e banco de dados relacional PostgreSQL. O projeto contou ainda com mapas interativos para visualização geográfica das regiões monitoradas, dashboards com gráficos de indicadores, autenticação com controle de acesso por perfil e processamento contínuo de dados via schedulers que atualizavam os indicadores em tempo real.</p>
 
                   <div class="project-media">
@@ -373,36 +392,143 @@
 
                   <h6 class="section-title">Contribuições Pessoais</h6>
                   <div class="contribution-text">
-                    <p>Contribuí no desenvolvimento das telas da aplicação utilizando Vue.js 3 com TypeScript, criando componentes e estruturando os fluxos de navegação entre as views. O uso de TypeScript tornou o desenvolvimento mais seguro, especialmente ao lidar com os dados retornados pela API — tipando as interfaces de resposta, eliminamos uma classe de erros em tempo de execução que seriam difíceis de rastrear sem tipagem estática.</p>
-                    <p>Atuei no backend desenvolvendo controllers e services responsáveis por processar e expor os dados de tráfego para o frontend. Contribuí com endpoints para consulta de regiões monitoradas, indicadores por período e protocolos de ação vinculados a cada nível de alerta, com contratos de API bem definidos que evitassem breaking changes entre as camadas ao longo das sprints.</p>
-                    <p>Implementei a comunicação entre o frontend e a API, configurando serviços de consumo de endpoints para exibição de indicadores, status das regiões e alertas ativos. Utilizei axios com interfaces TypeScript para garantir que os dados retornados pela API fossem tratados de forma segura e consistente nas views, centralizando as chamadas HTTP e evitando que lógica de consumo de API ficasse espalhada pelos componentes.</p>
-                    <p>Participei da modelagem e persistência das entidades do sistema, incluindo regiões, indicadores e alertas. Trabalhei com a configuração de entidades JPA e a definição dos relacionamentos entre elas, garantindo que a estrutura do banco suportasse tanto as consultas em tempo real dos dashboards quanto os históricos de indicadores por período.</p>
+                    <p>Neste semestre atuei como <strong>Scrum Master</strong> do time de oito pessoas. Minha responsabilidade principal era o processo: facilitar as cerimônias do Scrum, acompanhar o andamento das sprints, ajudar a remover impedimentos e garantir que o time seguisse os acordos definidos para o projeto, como o padrão de commits, o template de pull requests, os cards do JIRA e as orientações para as dailys.</p>
+                    <p>Além do papel de Scrum Master, contribuí diretamente com a base técnica do projeto. No frontend, criei o projeto <code>tms-client</code> do zero com Vue 3, TypeScript e Vite, já configurado com roteamento, Pinia, ESLint e Prettier. Em seguida, escrevi o <code>Dockerfile</code> e o <code>docker-compose</code> da aplicação para que todo o time rodasse o frontend no mesmo ambiente.</p>
+                    <p>No backend, implementei as entidades JPA do Spring Boot a partir do modelo de banco definido pelo time: câmeras, regiões, indicadores, níveis, protocolos, registros de velocidade, usuários e perfis. Mapeei os relacionamentos entre elas, incluindo a chave composta da relação entre regiões e indicadores (<code>RegionIndicatorId</code>), e corrigi os tipos das colunas de valor para que o mapeamento ficasse fiel ao banco.</p>
                   </div>
 
                   <details class="skills-details">
                     <summary>Hard Skills</summary>
                     <ul class="skill-level-list">
-                      <li><span>Vue.js 3 + TypeScript</span><span>Avançado</span></li>
-                      <li><span>Spring Boot + Java 17</span><span>Avançado</span></li>
-                      <li><span>PostgreSQL + JPA</span><span>Avançado</span></li>
-                      <li><span>Integração Full Stack</span><span>Avançado</span></li>
+                      <li><span>Scrum (Scrum Master)</span><span>Avançado</span></li>
+                      <li><span>JPA / Hibernate (mapeamento objeto-relacional)</span><span>Avançado</span></li>
+                      <li><span>Vue 3 + TypeScript + Vite</span><span>Intermediário</span></li>
+                      <li><span>Docker</span><span>Intermediário</span></li>
                       <li><span>Git / GitHub</span><span>Avançado</span></li>
-                      <li><span>Scrum</span><span>Avançado</span></li>
                     </ul>
                   </details>
+                  <div class="contribution-text">
+                    <p><strong>Scrum (Scrum Master):</strong> Depois de três semestres como desenvolvedora, passei a enxergar o Scrum pelo lado de quem cuida do processo. Isso mudou minha relação com a metodologia: as cerimônias e os acordos do time deixaram de ser obrigações e passaram a ser ferramentas para manter o ritmo e a qualidade das entregas.</p>
+                    <p><strong>JPA / Hibernate:</strong> Mapear as entidades a partir de um modelo de banco já definido exigiu traduzir tabelas, chaves estrangeiras e uma chave composta para anotações JPA sem distorcer o modelo. Foi a aplicação direta de modelagem relacional, que é o centro da minha formação, dentro de uma aplicação Java.</p>
+                    <p><strong>Vue 3 + TypeScript + Vite:</strong> Criar o projeto frontend do zero significou escolher e configurar as ferramentas que todo o time usaria durante o semestre: tipagem, roteamento, gerenciamento de estado, lint e formatação.</p>
+                    <p><strong>Docker:</strong> Containerizar o frontend logo no início evitou o clássico "na minha máquina funciona" em um time grande, com cada integrante em um ambiente diferente.</p>
+                  </div>
 
                   <details class="skills-details">
                     <summary>Soft Skills</summary>
                     <ul class="skill-level-list">
+                      <li><span>Liderança Facilitadora</span><span>Avançado</span></li>
+                      <li><span>Comunicação</span><span>Avançado</span></li>
                       <li><span>Visão Sistêmica</span><span>Avançado</span></li>
-                      <li><span>Resolução de Problemas</span><span>Avançado</span></li>
-                      <li><span>Colaboração Técnica</span><span>Avançado</span></li>
                     </ul>
                   </details>
                   <div class="contribution-text">
-                    <p><strong>Visão Sistêmica:</strong> Atuar simultaneamente no frontend e no backend me ajudou a desenvolver uma visão mais completa do sistema, entendendo como as decisões em uma camada impactam as demais. Essa perspectiva reduziu o número de problemas de integração porque, ao projetar uma funcionalidade, já considerava como ela seria consumida do outro lado.</p>
-                    <p><strong>Resolução de Problemas:</strong> Ao lidar com integração de endpoints, fluxo de dados em tempo real e autenticação entre camadas, desenvolvi mais capacidade de investigar e isolar problemas complexos. Aprender a usar as ferramentas certas de diagnóstico — logs, respostas HTTP, estado do store Vue — tornou o processo de depuração mais eficiente.</p>
-                    <p><strong>Colaboração Técnica:</strong> Como trabalhei em diferentes partes da aplicação, precisei me comunicar ativamente com o time para alinhar contratos de API, comportamento esperado das telas e estrutura dos dados trafegados entre as camadas.</p>
+                    <p><strong>Liderança Facilitadora:</strong> Como Scrum Master, meu papel não era decidir o que o time faria, mas criar condições para que ele trabalhasse bem. Liderar sem hierarquia, apoiando colegas e removendo bloqueios, foi uma habilidade nova para mim.</p>
+                    <p><strong>Comunicação:</strong> O Scrum Master fica entre o Product Owner, o time de desenvolvimento e os professores. Manter todos alinhados sobre prioridades, prazos e impedimentos exigiu uma comunicação clara e frequente.</p>
+                    <p><strong>Visão Sistêmica:</strong> Ter preparado tanto a base do frontend quanto as entidades do backend me deu uma visão de como as partes do sistema se conectavam. Isso ajudou a entender as dependências entre as tarefas do time e a antecipar impedimentos durante as sprints.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semestre 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="sem5Heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sem5Collapse" aria-expanded="false" aria-controls="sem5Collapse">
+                  5º Semestre — SCAR, Gestão Analítica de Programas Estratégicos (1/2026)
+                </button>
+              </h2>
+              <div id="sem5Collapse" class="accordion-collapse collapse" aria-labelledby="sem5Heading" data-bs-parent="#semestersAccordion">
+                <div class="accordion-body">
+                  <p>No primeiro semestre de 2026, desenvolvemos o <strong>SCAR</strong> (Sistema de Controle e Acompanhamento de Recursos), uma solução analítica para consolidar e visualizar os custos de projetos estratégicos. Nosso cliente foi a <strong>SIATT</strong>, empresa brasileira de defesa especializada em sistemas embarcados críticos e mísseis inteligentes, responsável por iniciativas como o MANSUP, o Míssil Antinavio Nacional de Superfície da Marinha do Brasil.</p>
+                  <p>O núcleo do projeto foi a construção de um <strong>Data Warehouse</strong> capaz de consolidar dados de materiais, horas técnicas, projetos, programas e orçamento, permitindo análises históricas e multidimensionais por tempo, programa, projeto, material, colaborador e situação financeira. Os dados percorrem uma arquitetura em camadas (bronze, silver e gold) até chegarem aos dashboards, que respondem perguntas como: quanto cada projeto gastou, qual o desvio percentual em relação ao orçamento, qual a classificação de saúde financeira de cada projeto e quais estão em risco de estouro. Atuei no <strong>Dev Team</strong>, com entregas no backend em Python/Django, na engenharia de dados do DW e no frontend em Vue.js com TypeScript.</p>
+
+                  <div class="project-media">
+                    <img src="assets/5_semestre/scar-dashboard-principal.png" alt="Dashboard principal do SCAR" class="project-image">
+                    <p class="project-caption">Dashboard principal do SCAR com a consolidação de custos por programa e projeto.</p>
+                  </div>
+
+                  <div class="project-link-box">
+                    <span>Repositório do projeto</span>
+                    <a href="https://github.com/Steam-Ducks/strategic-cost-analytics" target="_blank" rel="noopener noreferrer">Acessar no GitHub</a>
+                  </div>
+
+                  <h6 class="section-title">Tecnologias Utilizadas</h6>
+                  <div class="tech-list">
+                    <a class="tech-item" href="https://www.python.org/doc/" target="_blank" rel="noopener noreferrer">
+                      <span class="tech-name">Python + Django REST</span>
+                      <span class="tech-desc">Backend, APIs e scripts de ETL</span>
+                    </a>
+                    <a class="tech-item" href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer">
+                      <span class="tech-name">PostgreSQL</span>
+                      <span class="tech-desc">Data Warehouse em camadas bronze, silver e gold</span>
+                    </a>
+                    <a class="tech-item" href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">
+                      <span class="tech-name">Vue.js 3 + TypeScript</span>
+                      <span class="tech-desc">Frontend e dashboards</span>
+                    </a>
+                    <a class="tech-item" href="https://www.chartjs.org/docs/" target="_blank" rel="noopener noreferrer">
+                      <span class="tech-name">Chart.js</span>
+                      <span class="tech-desc">Gráficos dos indicadores de custo</span>
+                    </a>
+                    <a class="tech-item" href="https://docs.pytest.org/" target="_blank" rel="noopener noreferrer">
+                      <span class="tech-name">Pytest, Vitest e Playwright</span>
+                      <span class="tech-desc">Testes unitários, de integração e E2E com TDD</span>
+                    </a>
+                    <a class="tech-item" href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer">
+                      <span class="tech-name">Docker + GitHub Actions</span>
+                      <span class="tech-desc">Ambiente padronizado e pipelines de CI/CD</span>
+                    </a>
+                  </div>
+
+                  <h6 class="section-title">Contribuições Pessoais</h6>
+                  <div class="contribution-text">
+                    <p>Na 1ª sprint, fui responsável pela base da engenharia de dados do Data Warehouse. Criei o schema bronze e o schema silver por meio de migrations no Django, modelei as entidades que compõem a estrutura do banco e desenvolvi os scripts de ETL que fazem a ingestão dos dados brutos para a camada silver. Também criei um Makefile para padronizar os comandos de execução do ambiente e escrevi os testes da aplicação seguindo TDD, o que deu ao time uma base confiável sobre a qual as demais camadas seriam construídas.</p>
+
+                    <div class="project-media">
+                      <img src="assets/5_semestre/scar-modelo-logico-dw.png" alt="Modelo lógico do Data Warehouse do SCAR" class="project-image">
+                      <p class="project-caption">Modelo lógico do Data Warehouse, com dimensões e tabelas fato.</p>
+                    </div>
+
+                    <p>Na 2ª sprint, avancei para a camada gold, que concentra os dados prontos para análise. Implementei a tabela de indicadores de materiais, com o SQL de agregação, a migration, os comandos de ingestão e a API (models, serializers, views e rotas) que expõe esses indicadores ao frontend. Em seguida, desenvolvi o backend de orçamento: o snapshot de budget na camada gold, os selectors com as regras de consulta e os testes de selectors, serializers e views. No frontend, construí a tela de Orçamento e Saúde Financeira, primeiro com dados estáticos para validar o layout com o time e depois integrada ao backend, e implementei o tema claro/escuro global da aplicação.</p>
+                    <p>Na 3ª sprint, fiquei responsável pela segurança de ponta a ponta. No backend, implementei a autenticação com JWT, o modelo de usuário customizado, o endpoint de login e classes de permissão por perfil aplicadas a todas as views. No frontend, implementei o formulário de login, o gerenciamento da sessão, os route guards e um composable <code>usePermissions</code> que esconde menus, cards, gráficos e colunas de custo de acordo com o perfil do usuário. Como o projeto lida com dados financeiros de programas de defesa, garantir que cada perfil visse apenas o que lhe cabia era um requisito central, e não um detalhe.</p>
+                    <p>Na reta final, me dediquei à qualidade do código do frontend. Criei o composable <code>useChartsBase</code> com as configurações compartilhadas dos gráficos e migrei os demais composables para consumi-lo, decompus o header em subcomponentes menores e criei componentes reutilizáveis (<code>MetricCard</code>, <code>StatusBadge</code> e <code>UploadZone</code>) para substituir marcação duplicada entre as telas, sempre acompanhados de testes unitários e ajustados para passar no pipeline de CI.</p>
+                  </div>
+
+                  <details class="skills-details">
+                    <summary>Hard Skills</summary>
+                    <ul class="skill-level-list">
+                      <li><span>Data Warehouse (bronze, silver e gold)</span><span>Intermediário</span></li>
+                      <li><span>ETL e ingestão de dados</span><span>Avançado</span></li>
+                      <li><span>Python + Django REST Framework</span><span>Intermediário</span></li>
+                      <li><span>PostgreSQL + SQL analítico</span><span>Avançado</span></li>
+                      <li><span>Autenticação JWT e controle de acesso</span><span>Intermediário</span></li>
+                      <li><span>Vue.js 3 + TypeScript</span><span>Intermediário</span></li>
+                      <li><span>TDD (Pytest, Vitest e Playwright)</span><span>Avançado</span></li>
+                      <li><span>Docker + CI/CD</span><span>Intermediário</span></li>
+                    </ul>
+                  </details>
+                  <div class="contribution-text">
+                    <p><strong>Data Warehouse e ETL:</strong> Foi a habilidade central do semestre e a mais ligada à minha formação em Banco de Dados. Aplicá-la exigiu pensar o dado em etapas: o bronze guarda o dado como chega, o silver limpa e padroniza, e o gold entrega indicadores prontos, como o snapshot de orçamento e os indicadores de materiais. Construir as duas pontas desse fluxo me fez entender na prática por que separar armazenamento de análise torna as consultas dos dashboards mais simples e rastreáveis.</p>
+                    <p><strong>Python + Django REST Framework:</strong> Foi a primeira vez que usei Python e Django em um projeto real, depois de dois semestres com Spring Boot. Apliquei o que já sabia sobre camadas e contratos de API e aprendi o jeito Django de organizar o código: migrations versionando o schema, serializers validando dados e selectors isolando as regras de consulta.</p>
+                    <p><strong>Autenticação JWT e controle de acesso:</strong> Implementei a segurança nas duas camadas: o backend garante que um perfil não consiga acessar dados que não deveria, e o frontend esconde o que aquele perfil não precisa ver. Sem a primeira, a segunda seria apenas visual; fazer as duas me deu clareza sobre onde a segurança realmente acontece.</p>
+                    <p><strong>TDD e CI/CD:</strong> O time adotou o ciclo Red, Green, Refactor, e todos os meus PRs precisavam passar por lint (Black, Ruff e ESLint), testes e pipeline de CI antes do merge. Escrever o teste antes da implementação mudou minha forma de desenvolver: passei a definir o comportamento esperado antes de pensar no código.</p>
+                  </div>
+
+                  <details class="skills-details">
+                    <summary>Soft Skills</summary>
+                    <ul class="skill-level-list">
+                      <li><span>Aprendizado Contínuo</span><span>Avançado</span></li>
+                      <li><span>Responsabilidade e Autonomia</span><span>Avançado</span></li>
+                      <li><span>Pensamento Analítico</span><span>Avançado</span></li>
+                      <li><span>Colaboração</span><span>Avançado</span></li>
+                    </ul>
+                  </details>
+                  <div class="contribution-text">
+                    <p><strong>Aprendizado Contínuo:</strong> O semestre trouxe uma stack nova (Python, Django e conceitos de Data Warehouse) e, já na 1ª sprint, minha entrega era a fundação do banco sobre a qual o resto do time dependia. Estudei e apliquei os conceitos diretamente no projeto, sem a margem de aprender primeiro e entregar depois.</p>
+                    <p><strong>Responsabilidade e Autonomia:</strong> Assumi funcionalidades completas de ponta a ponta, como orçamento e login com controle de acesso, cuidando do banco, da API, da tela e dos testes. Ser dona de uma funcionalidade inteira significou responder pelo resultado final e não apenas pela minha parte isolada.</p>
+                    <p><strong>Pensamento Analítico:</strong> Trabalhar com perguntas de negócio do cliente, como desvio orçamentário e risco de estouro, exigiu traduzir uma necessidade de gestão em estrutura de dados e regras de cálculo. Antes de escrever qualquer SQL, era preciso entender qual decisão aquele indicador iria apoiar.</p>
+                    <p><strong>Colaboração:</strong> Em um time de oito pessoas, com entregas no backend e no frontend acontecendo em paralelo, as refatorações que fiz no final do semestre, como os componentes compartilhados e o <code>useChartsBase</code>, foram pensadas para facilitar o trabalho dos colegas e reduzir a duplicação de código entre telas desenvolvidas por pessoas diferentes.</p>
                   </div>
                 </div>
               </div>

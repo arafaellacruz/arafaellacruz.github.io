@@ -282,3 +282,68 @@ body {
     gap: 0.15rem;
   }
 }
+/* Papel exercido em cada projeto */
+.role-badge {
+  display: inline-block;
+  background: rgba(255,175,204,0.18);
+  color: var(--accent-dark);
+  border: 1px solid rgba(255,175,204,0.5);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+/* Fundo com bolinhas e brilhos rosa piscando (efeito glitter) */
+.bubbles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bubbles span {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff 0%, #ffc2da 45%, #ff8fbd 100%);
+  box-shadow: 0 0 6px 1px rgba(255,143,189,0.6), 0 0 14px 3px rgba(255,175,204,0.35);
+  opacity: 0;
+  transform: scale(0.2);
+  animation: glitter var(--dur) ease-in-out var(--delay) infinite;
+}
+
+/* Estrelinha de 4 pontas */
+.bubbles span.sparkle {
+  border-radius: 0;
+  background: linear-gradient(135deg, #fff 0%, #ffb3d1 50%, #ff7fb3 100%);
+  box-shadow: none;
+  filter: drop-shadow(0 0 4px rgba(255,143,189,0.8));
+  clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
+}
+
+@keyframes glitter {
+  0%   { opacity: 0;    transform: translate(0, 0) scale(0.2) rotate(0deg); }
+  20%  { opacity: 0.95; transform: translate(calc(var(--dx) * 0.3), calc(var(--dy) * 0.3)) scale(1) rotate(25deg); }
+  35%  { opacity: 0.4;  transform: translate(calc(var(--dx) * 0.5), calc(var(--dy) * 0.5)) scale(0.7) rotate(45deg); }
+  50%  { opacity: 0.9;  transform: translate(calc(var(--dx) * 0.7), calc(var(--dy) * 0.7)) scale(0.95) rotate(70deg); }
+  75%  { opacity: 0.2;  transform: translate(var(--dx), var(--dy)) scale(0.5) rotate(100deg); }
+  100% { opacity: 0;    transform: translate(var(--dx), var(--dy)) scale(0.2) rotate(120deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubbles span {
+    animation: none;
+    opacity: 0.45;
+    transform: none;
+  }
+}
+
+body > .container {
+  position: relative;
+  z-index: 1;
+}

@@ -742,3 +742,37 @@ body > .container {
   .theme-toggle .label-dark,
   .theme-toggle .label-light { display: none !important; }
 }
+
+/* capa clicável para download (AlgLog) */
+.download-cover {
+  position: relative;
+  display: block;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.download-cover:hover,
+.download-cover:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--glow);
+}
+
+.download-cover:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; }
+
+.download-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--pink), var(--pink-strong));
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(255, 45, 135, 0.4);
+}

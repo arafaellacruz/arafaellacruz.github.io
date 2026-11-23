@@ -9,13 +9,6 @@ window.I18N_EN = {
  "t008": "Hi! I'm Rafaella, I'm 27 and I'm from São José dos Campos, Brazil. I'm curious by nature and driven by challenges, and that shows both in the way I code and in my life away from the screen. I love sports, surfing, the beach and traveling whenever I can. Being near the sea makes me feel that any problem has a solution, and exploring new places helps me see the world from different perspectives, which ends up shaping the way I think and solve problems at work too.",
  "t009": "Professionally, I'm finishing the 6th and final semester of the Database Technology program at Fatec São José dos Campos, where every semester we build real projects for partner companies using the SCRUM methodology. I'm an Administration technician from CEPHAS and a Junior Full-Stack Web Developer trained by Generation Brazil's tech bootcamp. Throughout my degree I worked as a developer, Product Owner and Scrum Master, building systems that evolved from terminal applications to full stack web architectures with Vue.js, Java Spring Boot, TypeScript and PostgreSQL.",
  "t010": "Since March 2026, I've been a Software Developer at Ericsson, working in Research and Development of Artificial Intelligence solutions. I build intelligent agents and the infrastructure behind them: personas, modular skills, integrations through the Model Context Protocol (MCP) and GraphRAG architectures for contextual knowledge retrieval.",
- "t011": "Professional Experience",
- "t013": "Ericsson · Jun 2026 to present · Remote",
- "t014": "Creating personas for AI agents, defining their behavior, instructions, responsibilities and operating context.",
- "t015": "Developing modular skills that extend and specialize the agents' capabilities.",
- "t016": "Developing and integrating MCPs to connect agents to external tools, services and data sources.",
- "t017": "Building GraphRAG architectures to structure, relate and retrieve knowledge with context.",
- "t018": "Researching and prototyping new approaches and infrastructure components for agent-based systems.",
  "t019": "Contact",
  "t021": "Core Skills",
  "t025": "Programming Logic",
@@ -327,5 +320,22 @@ window.I18N_EN = {
  "t383": "<strong>User Empathy:</strong> Writing stories for three different roles and manuals for people without a technical background made me constantly think about who would be on the other side of the screen: what that person needs, what they already know and where they might get stuck.",
  "t384": "<strong>Ethical Responsibility:</strong> Validating LGPD was a reminder that behind every database row there is a person. Making sure an employee can refuse, correct or delete their data, and be notified if something goes wrong, is also part of product quality.",
  "t385": "Wrapping Up My Degree",
- "t386": "Akpedia closed a journey that began with a terminal calculator in the 1st semester. Across six projects, I was Product Owner in the first and the last, a developer in the 2nd, 3rd and 5th and Scrum Master in the 4th, and I leave Fatec understanding a system as a whole: from data in the database to the screen, from the team's process to the client's needs and the legal obligations of anyone who holds other people's data."
+ "t386": "Akpedia closed a journey that began with a terminal calculator in the 1st semester. Across six projects, I was Product Owner in the first and the last, a developer in the 2nd, 3rd and 5th and Scrum Master in the 4th, and I leave Fatec understanding a system as a whole: from data in the database to the screen, from the team's process to the client's needs and the legal obligations of anyone who holds other people's data.",
+ "t387": "2023 to 2026",
+ "t388": "My Journey",
+ "t389": "In 2023, I was working as a contract frontend developer and taking an online degree at a private college, but I wasn't happy with the quality of the teaching. My manager at the time, who studied in one of the first Database classes at Fatec São José dos Campos, told me about the program and about the quality of its teaching and professors.",
+ "t390": "I decided to give it a try: I took the entrance exam at the end of that year and joined the class starting in the first semester of 2024.",
+ "t391": "These last three years were extremely challenging, but I would do it all again. It was absolutely worth it, for all the knowledge I gained, the friends I made and the amazing professors I had the honor of studying and learning with.",
+ "t392": "feb 2025 to jun 2026 · supervised by <strong>Prof. Fabiano Sabha</strong>",
+ "t393": "Algorithms Teaching Assistant",
+ "t394": "For almost a year and a half, I was a teaching assistant for the Algorithms course. I helped first-semester students take their first steps in programming logic: I answered questions about concepts and exercises, supported them in implementing algorithms and using VisualG, and shared books and other study resources that had made a difference in my own learning.",
+ "t395": "Before my first semester as a teaching assistant began, I wrote <strong>AlgLog</strong>, a guide for students just starting college. It includes study tips, step-by-step instructions to install VisualG and explains sequential, conditional and loop structures with commented examples.",
+ "t396": {
+  "alt": "Cover of AlgLog, the algorithms guide written for the students. Click to download the PDF."
+ },
+ "t397": "AlgLog, the support guide I wrote for the students. Click the cover to download it.",
+ "t398": "Teaching what I had learned only a short time before made me understand the concepts more deeply and explain the same idea in several different ways, until I found the one that made sense to each student.",
+ "t399": "How I got to Fatec",
+ "t400": "The projects below show what I built along this journey.",
+ "t401": "Download PDF"
 };

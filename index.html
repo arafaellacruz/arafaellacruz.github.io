@@ -7,12 +7,38 @@
   <title>Rafaella Cruz | Portfólio</title>
   <meta name="description" content="Portfólio de Rafaella Cruz — Software Developer em AI Agents e R&amp;D na Ericsson, estudante de Banco de Dados e desenvolvedora full stack." />
 
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fbf6fb" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#06050b" media="(prefers-color-scheme: dark)" />
+
+  <!-- Tema salvo (ou do sistema) aplicado antes da pintura, sem "piscar" -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="bubbles" aria-hidden="true">
+  <div class="space-bg" aria-hidden="true">
+    <div class="nebula n1"></div>
+    <div class="nebula n2"></div>
+    <div class="nebula n3"></div>
+    <canvas id="starfield"></canvas>
+    <div class="planet"></div>
+  <div class="bubbles">
     <span class="sparkle" style="--x:32.4%;--y:15.5%;--size:20px;--dur:3.0s;--delay:-5.3s;--dx:-11px;--dy:-7px"></span>
     <span style="--x:57.5%;--y:88.3%;--size:7px;--dur:2.9s;--delay:-2.8s;--dx:-12px;--dy:-11px"></span>
     <span style="--x:9.8%;--y:41.8%;--size:13px;--dur:3.3s;--delay:-1.5s;--dx:6px;--dy:0px"></span>
@@ -59,6 +85,14 @@
     <span style="--x:76.3%;--y:15.4%;--size:6px;--dur:4.6s;--delay:-4.7s;--dx:3px;--dy:-17px"></span>
     <span style="--x:32.6%;--y:50.8%;--size:12px;--dur:4.6s;--delay:-5.0s;--dx:14px;--dy:-1px"></span>
   </div>
+  </div>
+
+  <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    <span class="label-dark">dark mode</span>
+    <span class="label-light">light mode</span>
+  </button>
 
   <noscript>Este site necessita de JavaScript para funcionar corretamente.</noscript>
 
@@ -70,12 +104,16 @@
       <div class="col-lg-4">
         <div class="card profile-card p-3">
           <div class="text-center">
-            <img
-              src="https://avatars.githubusercontent.com/u/95590783?v=4"
-              alt="Rafaella Cruz"
-              class="avatar mb-3"
-            />
-            <h3>Rafaella Cruz</h3>
+            <div class="avatar-orbit">
+              <span class="orbit-dot" aria-hidden="true"></span>
+              <img
+                src="https://avatars.githubusercontent.com/u/95590783?v=4"
+                alt="Rafaella Cruz"
+                class="avatar"
+              />
+            </div>
+            <span class="kicker">hello, world</span>
+            <h3 class="profile-name">Rafaella Cruz</h3>
             <p class="text-muted">Software Developer na Ericsson (AI Agents &amp; R&amp;D) | Estudante de Banco de Dados</p>
           </div>
 
@@ -150,7 +188,8 @@
 
       <!-- Conteúdo principal -->
       <div class="col-lg-8">
-        <div class="card p-3 mb-4">
+        <div class="card projects-card p-3 p-md-4 mb-4">
+          <span class="kicker">fatec sjc · 2024 — 2026</span>
           <h4 class="mb-3">Meus Projetos</h4>
 
           <div class="accordion" id="semestersAccordion">
@@ -759,6 +798,126 @@
       </div>
     </div>
   </div>
+
+  <!-- Alternância de tema -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('themeToggle');
+      function sync() {
+        btn.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
+      }
+      sync();
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync();
+        window.dispatchEvent(new Event('themechange'));
+      });
+    })();
+  </script>
+
+  <!-- Campo de estrelas animado -->
+  <script>
+    (function () {
+      var canvas = document.getElementById('starfield');
+      if (!canvas || !canvas.getContext) return;
+      var ctx = canvas.getContext('2d');
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var w = 0, h = 0, stars = [], meteors = [], palette;
+
+      function readPalette() {
+        var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+        palette = dark
+          ? { star: '255,255,255', accent: '255,90,160', violet: '180,150,255', alpha: 1 }
+          : { star: '60,30,80', accent: '224,16,107', violet: '120,80,220', alpha: 0.55 };
+      }
+
+      function resize() {
+        w = window.innerWidth; h = window.innerHeight;
+        canvas.width = w * dpr; canvas.height = h * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        var count = Math.round((w * h) / 5200);
+        stars = [];
+        for (var i = 0; i < count; i++) {
+          var r = Math.random();
+          stars.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            z: Math.random() * 0.8 + 0.2,               /* profundidade: parallax */
+            size: Math.random() * 1.3 + 0.3,
+            phase: Math.random() * Math.PI * 2,
+            speed: Math.random() * 0.02 + 0.006,
+            tone: r < 0.12 ? 'accent' : r < 0.2 ? 'violet' : 'star'
+          });
+        }
+      }
+
+      function spawnMeteor() {
+        meteors.push({
+          x: Math.random() * w * 0.8 + w * 0.2,
+          y: Math.random() * h * 0.4,
+          vx: -(Math.random() * 6 + 7),
+          vy: Math.random() * 3 + 3,
+          life: 0,
+          max: 60 + Math.random() * 30
+        });
+      }
+
+      function draw(t) {
+        ctx.clearRect(0, 0, w, h);
+        for (var i = 0; i < stars.length; i++) {
+          var s = stars[i];
+          if (!reduce) {
+            s.x -= 0.05 * s.z;                          /* deriva lenta para a esquerda */
+            if (s.x < -2) s.x = w + 2;
+          }
+          var tw = reduce ? 0.8 : 0.55 + 0.45 * Math.sin(s.phase + t * 0.001 * s.speed * 60);
+          var a = tw * s.z * palette.alpha;
+          var col = palette[s.tone];
+          ctx.beginPath();
+          ctx.fillStyle = 'rgba(' + col + ',' + a.toFixed(3) + ')';
+          ctx.arc(s.x, s.y, s.size * s.z + 0.2, 0, Math.PI * 2);
+          ctx.fill();
+          if (s.size > 1.3 && s.tone !== 'star') {     /* brilho em cruz nas estrelas maiores */
+            ctx.strokeStyle = 'rgba(' + col + ',' + (a * 0.5).toFixed(3) + ')';
+            ctx.lineWidth = 0.6;
+            ctx.beginPath();
+            ctx.moveTo(s.x - 4, s.y); ctx.lineTo(s.x + 4, s.y);
+            ctx.moveTo(s.x, s.y - 4); ctx.lineTo(s.x, s.y + 4);
+            ctx.stroke();
+          }
+        }
+        if (!reduce) {
+          if (Math.random() < 0.004 && meteors.length < 2) spawnMeteor();
+          for (var j = meteors.length - 1; j >= 0; j--) {
+            var m = meteors[j];
+            m.x += m.vx; m.y += m.vy; m.life++;
+            var fade = 1 - m.life / m.max;
+            var g = ctx.createLinearGradient(m.x, m.y, m.x - m.vx * 10, m.y - m.vy * 10);
+            g.addColorStop(0, 'rgba(' + palette.accent + ',' + (0.9 * fade * palette.alpha + 0.1 * fade).toFixed(3) + ')');
+            g.addColorStop(1, 'rgba(' + palette.accent + ',0)');
+            ctx.strokeStyle = g;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(m.x, m.y);
+            ctx.lineTo(m.x - m.vx * 10, m.y - m.vy * 10);
+            ctx.stroke();
+            if (m.life >= m.max) meteors.splice(j, 1);
+          }
+          requestAnimationFrame(draw);
+        }
+      }
+
+      readPalette();
+      resize();
+      window.addEventListener('resize', function () { resize(); if (reduce) draw(0); });
+      window.addEventListener('themechange', function () { readPalette(); if (reduce) draw(0); });
+      requestAnimationFrame(draw);
+    })();
+  </script>
 
   <!-- Bootstrap Bundle (inclui Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

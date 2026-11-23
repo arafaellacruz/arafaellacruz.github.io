@@ -456,9 +456,7 @@ body > .container {
 }
 
 .role-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  display: inline-block;
   background: var(--tint);
   color: var(--text-soft);
   border: 1px solid color-mix(in srgb, var(--pink) 35%, transparent);
@@ -466,12 +464,16 @@ body > .container {
   padding: 4px 14px 4px 10px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
 .role-badge::before {
   content: "";
+  display: inline-block;
+  vertical-align: middle;
   width: 8px; height: 8px;
+  margin: -2px 0.45rem 0 0;
   border-radius: 50%;
   background: var(--pink);
   box-shadow: 0 0 8px var(--pink);
@@ -862,6 +864,7 @@ body > .container {
 .footer-icon {
   position: relative;
   display: inline-block;
+  flex-shrink: 0;
   width: 1.35rem;
   height: 1.1rem;
   font-style: normal;
@@ -907,4 +910,38 @@ body > .container {
 
 @media (prefers-reduced-motion: reduce) {
   .footer-icon .sun, .footer-icon .moon { animation: none; }
+}
+
+/* ---------- ajustes para celular ---------- */
+@media (max-width: 768px) {
+  .footer-quote { flex-direction: column; gap: 0.4rem; }
+  .footer-meta span { display: block; }
+  .footer-meta .footer-dot { display: none; }
+}
+
+@media (max-width: 576px) {
+  /* texto justificado em coluna estreita abre buracos entre as palavras */
+  .profile-card p,
+  .accordion-body > p { text-align: left !important; }
+
+  .role-badge { border-radius: 14px; }
+
+  /* no celular o botão de download vira uma barra abaixo da capa */
+  .download-hint {
+    position: static;
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.55rem;
+  }
+  .download-cover .project-image { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+
+  .accordion-button { font-size: 0.92rem; padding: 0.85rem 0.95rem; }
+  .accordion-body { padding: 1.1rem 0.95rem; }
+  .card.p-3 { padding: 1.1rem !important; }
+  .skill-level-list li { padding: 0.55rem 0.8rem; font-size: 0.88rem; }
+  .skills-header, .skills-more summary { padding-left: 0.8rem; padding-right: 0.8rem; }
+  .skills-more > .contribution-text { padding: 0.25rem 0.8rem 0.9rem; }
+  .top-controls { top: 12px; right: 12px; }
 }

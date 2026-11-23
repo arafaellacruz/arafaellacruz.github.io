@@ -6,7 +6,7 @@ window.I18N_EN = {
  },
  "t006": "Software Developer at Ericsson (AI Agents &amp; R&amp;D) | Database Student",
  "t007": "About me",
- "t008": "Hi! I'm Rafaella, I'm 27 and I'm from São José dos Campos, Brazil. I'm curious by nature and driven by challenges, and that shows both in the way I code and in my life away from the screen. I love sports, surfing, the beach and traveling whenever I can. Being near the sea makes me feel that any problem has a solution, and exploring new places helps me see the world from different perspectives, which ends up shaping the way I think and solve problems at work too.",
+ "t008": "Hi! I'm Rafaella, I'm 27 and I'm from São José dos Campos, Brazil. I'm curious by nature and driven by challenges, and that shows both in the way I code and in my life away from the screen. I'm a volleyball player and I love sports, surfing, the beach and traveling whenever I can. Being near the sea makes me feel that any problem has a solution, and exploring new places helps me see the world from different perspectives, which ends up shaping the way I think and solve problems at work too.",
  "t009": "Professionally, I'm finishing the 6th and final semester of the Database Technology program at Fatec São José dos Campos, where every semester we build real projects for partner companies using the SCRUM methodology. I'm an Administration technician from CEPHAS and a Junior Full-Stack Web Developer trained by Generation Brazil's tech bootcamp. Throughout my degree I worked as a developer, Product Owner and Scrum Master, building systems that evolved from terminal applications to full stack web architectures with Vue.js, Java Spring Boot, TypeScript and PostgreSQL.",
  "t010": "Since March 2026, I've been a Software Developer at Ericsson, working in Research and Development of Artificial Intelligence solutions. I build intelligent agents and the infrastructure behind them: personas, modular skills, integrations through the Model Context Protocol (MCP) and GraphRAG architectures for contextual knowledge retrieval.",
  "t019": "Contact",
@@ -197,10 +197,7 @@ window.I18N_EN = {
  "t305": "My role on the team: <strong>Product Owner</strong>",
  "t306": "In the second semester of 2026, we built <strong>Akpedia</strong>, a solution to automatically classify engineering technical documents and centralize how they are searched. Our client was <strong>Akaer</strong>, a Brazilian engineering company headquartered in São José dos Campos, operating in the aeronautics, space and defense sectors, with strong expertise in structural design, product engineering and the integration of highly complex systems. In programs of that scale, the volume of technical documentation is huge, and organizing that collection directly affects productivity, compliance and the preservation of engineering knowledge.",
  "t307": "The system lets users search documents by word, phrase or natural-language question, using <strong>semantic search</strong> with embeddings stored in PostgreSQL with pgvector. When uploading a new document, the user gets an AI-generated category suggestion, which goes to an approval queue where an approver reviews, edits and publishes the document. Access is authenticated, with three roles (User, Approver and Administrator) and document visibility by department, plus consent to the terms of use and data incident notification. The architecture is split into three services: a Vue.js + TypeScript frontend, a Spring Boot backend and a Python + FastAPI Machine Learning service. I worked as <strong>Product Owner</strong> for a team of five.",
- "t308": {
-  "alt": "Akpedia demo on YouTube"
- },
- "t309": "Akpedia demo. Click the image to watch it on YouTube.",
+ "t309": "Akpedia demo. <a href=\"https://www.youtube.com/watch?v=qHbBRwY2Ly0\" target=\"_blank\" rel=\"noopener noreferrer\">Open on YouTube</a>.",
  "t310": "Project repository",
  "t311": "View on GitHub",
  "t312": "Technologies Used",
@@ -276,7 +273,7 @@ window.I18N_EN = {
  "t397": "AlgLog, the support guide I wrote for the students. Click the cover to download it.",
  "t398": "Teaching what I had learned only a short time before made me understand the concepts more deeply and explain the same idea in several different ways, until I found the one that made sense to each student.",
  "t399": "How I got to Fatec",
- "t400": "The projects below show what I built along this journey.",
+ "t400": "And at the heart of it all were the projects: six semesters, six projects and three different Scrum roles (Product Owner, developer and Scrum Master). Below, I share what I built in each one.",
  "t401": "Download PDF",
  "t402": "Grateful for every choice, abundance in every drop.",
  "t403": "Designed and developed by Rafaella Cruz",
@@ -302,5 +299,8 @@ window.I18N_EN = {
  "t423": "fatec sjc · 2026",
  "t424": "Akpedia closed a journey that began with a terminal calculator in the 1st semester. Across six projects, I was Product Owner in the first and the last, a developer in the 2nd, 3rd and 5th and Scrum Master in the 4th, and I leave Fatec understanding a system as a whole: from data in the database to the screen, from the team's process to the client's needs and the legal obligations of anyone who holds other people's data.",
  "t425": "Special thanks to my group of project teammates and friends: <strong>Carlos Daniel</strong>, <strong>Felipe Reis</strong>, <strong>Mariana Oliveira</strong> and <strong>Matheus Marciano</strong>.",
- "t426": "And to professors <strong>Adriana Silva</strong>, <strong>Carlos Garcia</strong>, <strong>Diogo Branquinho</strong>, <strong>Emanuel Mineda</strong>, <strong>Fernando Masanori</strong> and our program coordinator and professor <strong>Fabiano Sabha</strong>: you also helped me get here, with lessons, conversations, tough love, support and understanding. You have no idea how much positive impact you have on your students. You change lives. Gratitude."
+ "t426": "And to professors <strong>Adriana Silva</strong>, <strong>Carlos Garcia</strong>, <strong>Diogo Branquinho</strong>, <strong>Emanuel Mineda</strong>, <strong>Fernando Masanori</strong> and our program coordinator and professor <strong>Fabiano Sabha</strong>: you also helped me get here, with lessons, conversations, tough love, support and understanding. You have no idea how much positive impact you have on your students. You change lives. Gratitude.",
+ "t427": "Athletics Association",
+ "t428": "AAA Fatec SJC · <strong>Sports Director</strong>",
+ "t429": "During my degree, I was also the sports director of AAA Fatec SJC, the Academic Athletics Association of Fatec São José dos Campos. I played women's volleyball in the Interbixos and CVU championships, competing against other colleges in the city. The athletics association was a great place to practice collaboration and strengthen the bond between students and the academic community."
 };

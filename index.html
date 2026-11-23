@@ -131,7 +131,7 @@
 
           <h5 data-i18n="t007">Sobre mim</h5>
           <p data-i18n="t008" style="text-align: justify;">
-            Olá! Sou a Rafaella, tenho 27 anos e sou de São José dos Campos. Sou curiosa por natureza e movida por desafios, e essa característica aparece tanto na forma como eu codifico quanto na minha vida fora da tela. Gosto muito de esportes, surf, praia e de viajar sempre que possível. Estar perto do mar me dá a sensação de que qualquer problema tem solução, e explorar lugares novos me ajuda a enxergar o mundo com perspectivas diferentes, algo que acaba influenciando também a forma como penso e resolvo problemas no trabalho.
+            Olá! Sou a Rafaella, tenho 27 anos e sou de São José dos Campos. Sou curiosa por natureza e movida por desafios, e essa característica aparece tanto na forma como eu codifico quanto na minha vida fora da tela. Sou jogadora de vôlei e gosto muito de esportes, surf, praia e de viajar sempre que possível. Estar perto do mar me dá a sensação de que qualquer problema tem solução, e explorar lugares novos me ajuda a enxergar o mundo com perspectivas diferentes, algo que acaba influenciando também a forma como penso e resolvo problemas no trabalho.
           </p>
           <p data-i18n="t009" style="text-align: justify;">
             Na área profissional, estou concluindo o 6º e último semestre de Banco de Dados na Fatec São José dos Campos, onde a cada semestre desenvolvemos projetos reais para empresas parceiras utilizando a metodologia SCRUM. Sou técnica em Administração pelo CEPHAS e Desenvolvedora WEB Full-Stack Júnior formada pelo bootcamp de tecnologia da Generation Brazil. Ao longo da graduação, atuei como desenvolvedora, Product Owner e Scrum Master, construindo sistemas que evoluíram desde aplicações em terminal até arquiteturas web full stack com Vue.js, Java Spring Boot, TypeScript e PostgreSQL.
@@ -184,7 +184,7 @@
       </div>
 
       <!-- Conteúdo principal -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 d-lg-flex flex-lg-column">
         <div class="card projects-card story-card p-3 p-md-4 mb-4">
           <span data-i18n="t387" class="kicker">2023 a 2026</span>
           <h4 data-i18n="t388" class="mb-1">Minha Trajetória</h4>
@@ -213,8 +213,15 @@
 
           <div class="contribution-text">
             <p data-i18n="t398">Ensinar o que eu tinha aprendido pouco tempo antes me obrigou a entender os conceitos com mais profundidade e a explicar a mesma ideia de várias formas diferentes, até encontrar a que fazia sentido para cada aluno.</p>
-            <p data-i18n="t400">Os projetos abaixo mostram o que construí ao longo dessa jornada.</p>
           </div>
+
+          <h6 data-i18n="t427" class="section-title">Atlética</h6>
+          <p data-i18n="t428" class="role-badge">AAA Fatec SJC · <strong>Diretora de Esportes</strong></p>
+          <div class="contribution-text">
+            <p data-i18n="t429">Durante a graduação, também fui diretora de esportes da AAA Fatec SJC, a Associação Atlética Acadêmica da Faculdade de Tecnologia de São José dos Campos. Joguei vôlei feminino nos campeonatos Interbixos e CVU, disputando contra outras faculdades da cidade. A atlética foi um ótimo espaço para exercer a colaboração e fortalecer o vínculo entre os alunos e a comunidade acadêmica.</p>
+          </div>
+
+          <p class="journey-next"><i class="bi bi-arrow-down-circle" aria-hidden="true"></i><span data-i18n="t400">E, no centro de tudo isso, estavam os projetos: seis semestres, seis projetos e três papéis diferentes no Scrum (Product Owner, desenvolvedora e Scrum Master). A seguir, conto o que construí em cada um deles.</span></p>
         </div>
 
         <div class="card projects-card p-3 p-md-4 mb-4">
@@ -729,10 +736,10 @@
                   <p data-i18n="t307">O sistema permite buscar documentos por palavra, frase ou pergunta em linguagem natural, usando <strong>busca semântica</strong> com embeddings armazenados no PostgreSQL com pgvector. Ao enviar um novo documento, o usuário recebe uma sugestão de categoria gerada por IA, que segue para uma fila de aprovação onde um aprovador revisa, edita e publica o documento. O acesso é autenticado, com três perfis (Usuário, Aprovador e Administrador) e visibilidade de documentos por departamento, além de consentimento aos termos de uso e notificação de incidentes de dados. A arquitetura é dividida em três serviços: frontend em Vue.js com TypeScript, backend em Spring Boot e um serviço de Machine Learning em Python com FastAPI. Atuei como <strong>Product Owner</strong> de um time de cinco pessoas.</p>
 
                   <div class="project-media">
-                    <a href="https://www.youtube.com/watch?v=qHbBRwY2Ly0" target="_blank" rel="noopener noreferrer">
-                      <img data-i18n-alt="t308" src="https://img.youtube.com/vi/qHbBRwY2Ly0/maxresdefault.jpg" alt="Demonstração do Akpedia no YouTube" class="project-image">
-                    </a>
-                    <p data-i18n="t309" class="project-caption">Demonstração do Akpedia. Clique na imagem para assistir no YouTube.</p>
+                    <div class="video-embed">
+                      <iframe src="https://www.youtube-nocookie.com/embed/qHbBRwY2Ly0?rel=0" title="Demonstração do Akpedia" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p data-i18n="t309" class="project-caption">Demonstração do Akpedia. <a href="https://www.youtube.com/watch?v=qHbBRwY2Ly0" target="_blank" rel="noopener noreferrer">Abrir no YouTube</a>.</p>
                   </div>
 
                   <div class="project-link-box">
@@ -864,7 +871,7 @@
         </div>
 
         <!-- Encerramento da graduação -->
-        <div class="card projects-card closing-card p-3 p-md-4 mb-4">
+        <div class="card projects-card closing-card p-3 p-md-4 mb-0 flex-lg-grow-1">
           <span data-i18n="t423" class="kicker">fatec sjc · 2026</span>
           <h4 data-i18n="t385" class="mb-3">Encerramento da Graduação</h4>
           <div class="contribution-text">
@@ -889,6 +896,32 @@
       </p>
     </footer>
   </div>
+
+  <!-- O YouTube não toca vídeos incorporados em páginas abertas como arquivo (file://, erro 153).
+       Nesse caso, troca o player pela miniatura com link para o vídeo. -->
+  <script>
+    (function () {
+      if (location.protocol !== 'file:') return;
+      document.querySelectorAll('.video-embed iframe').forEach(function (frame) {
+        var id = (frame.src.match(/embed\/([^?]+)/) || [])[1];
+        if (!id) return;
+        var link = document.createElement('a');
+        link.href = 'https://www.youtube.com/watch?v=' + id;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        var img = document.createElement('img');
+        img.src = 'https://img.youtube.com/vi/' + id + '/maxresdefault.jpg';
+        img.alt = frame.title;
+        img.className = 'video-fallback';
+        link.appendChild(img);
+        var play = document.createElement('span');
+        play.className = 'video-play';
+        play.innerHTML = '<i class="bi bi-play-fill" aria-hidden="true"></i>';
+        link.appendChild(play);
+        frame.replaceWith(link);
+      });
+    })();
+  </script>
 
   <!-- Alternância de idioma (PT / EN) -->
   <script src="i18n.js"></script>

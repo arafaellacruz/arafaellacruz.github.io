@@ -7,8 +7,7 @@ window.I18N_EN = {
  "t006": "Software Developer at Ericsson (AI Agents &amp; R&amp;D) | Database Student",
  "t007": "About me",
  "t008": "Hi! I'm Rafaella, I'm 27 and I'm from São José dos Campos, Brazil. I'm curious by nature and driven by challenges, and that shows both in the way I code and in my life away from the screen. I'm a volleyball player and I love sports, surfing, the beach and traveling whenever I can. Being near the sea makes me feel that any problem has a solution, and exploring new places helps me see the world from different perspectives, which ends up shaping the way I think and solve problems at work too.",
- "t009": "Professionally, I'm finishing the 6th and final semester of the Database Technology program at Fatec São José dos Campos, where every semester we build real projects for partner companies using the SCRUM methodology. I'm an Administration technician from CEPHAS and a Junior Full-Stack Web Developer trained by Generation Brazil's tech bootcamp. Throughout my degree I worked as a developer, Product Owner and Scrum Master, building systems that evolved from terminal applications to full stack web architectures with Vue.js, Java Spring Boot, TypeScript and PostgreSQL.",
- "t010": "Since March 2026, I've been a Software Developer at Ericsson, working in Research and Development of Artificial Intelligence solutions. I build intelligent agents and the infrastructure behind them: personas, modular skills, integrations through the Model Context Protocol (MCP) and GraphRAG architectures for contextual knowledge retrieval.",
+ "t009": "Today I'm a Software Developer at Ericsson, working in Research and Development of Artificial Intelligence solutions, and I'm finishing the 6th and final semester of the Database Technology program at Fatec São José dos Campos.",
  "t019": "Contact",
  "t021": "Core Skills",
  "t025": "Programming Logic",
@@ -257,7 +256,7 @@ window.I18N_EN = {
  "t382": "<strong>Communication:</strong> The PO sits between the client and the team. Turning Akaer's needs into stories clear enough for the team to build, and then translating what was built back into manuals and deliveries for the client, was the heart of my work this semester.",
  "t383": "<strong>User Empathy:</strong> Writing stories for three different roles and manuals for people without a technical background made me constantly think about who would be on the other side of the screen: what that person needs, what they already know and where they might get stuck.",
  "t384": "<strong>Ethical Responsibility:</strong> Validating LGPD was a reminder that behind every database row there is a person. Making sure an employee can refuse, correct or delete their data, and be notified if something goes wrong, is also part of product quality.",
- "t385": "Wrapping Up My Degree",
+ "t385": "How I Leave Fatec",
  "t387": "2023 to 2026",
  "t388": "My Journey",
  "t389": "In 2023, I was working as a contract frontend developer and taking an online degree at a private college, but I wasn't happy with the quality of the teaching. My manager at the time, who studied in one of the first Database classes at Fatec São José dos Campos, told me about the program and about the quality of its teaching and professors.",
@@ -302,5 +301,9 @@ window.I18N_EN = {
  "t426": "And to professors <strong>Adriana Silva</strong>, <strong>Carlos Garcia</strong>, <strong>Diogo Branquinho</strong>, <strong>Emanuel Mineda</strong>, <strong>Fernando Masanori</strong> and our program coordinator and professor <strong>Fabiano Sabha</strong>: you also helped me get here, with lessons, conversations, tough love, support and understanding. You have no idea how much positive impact you have on your students. You change lives. Gratitude.",
  "t427": "Athletics Association",
  "t428": "AAA Fatec SJC · <strong>Sports Director</strong>",
- "t429": "During my degree, I was also the sports director of AAA Fatec SJC, the Academic Athletics Association of Fatec São José dos Campos. I played women's volleyball in the Interbixos and CVU championships, competing against other colleges in the city. The athletics association was a great place to practice collaboration and strengthen the bond between students and the academic community."
+ "t429": "During my degree, I was also the sports director of AAA Fatec SJC, the Academic Athletics Association of Fatec São José dos Campos. I played women's volleyball in the Interbixos and CVU championships, competing against other colleges in the city. The athletics association was a great place to practice collaboration and strengthen the bond between students and the academic community.",
+ "t430": "Before Fatec, I trained as an Administration technician at CEPHAS and as a Junior Full-Stack Web Developer through Generation Brazil's tech bootcamp.",
+ "t431": "Since March 2026, I've been a Software Developer at Ericsson, working in Research and Development of Artificial Intelligence solutions. I build intelligent agents and the infrastructure behind them: personas, modular skills, integrations through the Model Context Protocol (MCP) and GraphRAG architectures for contextual knowledge retrieval. This is where I now apply what I learned in my degree, such as Akpedia's semantic search, which connects directly to my work with RAG.",
+ "t432": "Acknowledgments",
+ "t433": "gratitude"
 };

@@ -35,7 +35,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
 </head>
-<body>
+<body id="top">
   <div class="space-bg" aria-hidden="true">
     <div class="nebula n1"></div>
     <div class="nebula n2"></div>
@@ -91,7 +91,21 @@
   </div>
   </div>
 
-  <div class="top-controls">
+  <!-- Menu fixo com as seções -->
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Seções">
+      <a class="nav-brand" href="#top" aria-label="Início"><span>rc</span><span class="nav-brand-dot" aria-hidden="true"></span></a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre" data-i18n="t434">Sobre mim</a></li>
+        <li><a href="#trajetoria" data-i18n="t435">Trajetória</a></li>
+        <li><a href="#projetos" data-i18n="t436">Projetos</a></li>
+        <li><a href="#como-saio" data-i18n="t437">Como saio</a></li>
+        <li><a href="#agradecimentos" data-i18n="t438">Agradecimentos</a></li>
+      </ul>
+      <div class="top-controls">
   <div class="lang-toggle" role="group" aria-label="Idioma / Language">
     <button type="button" data-lang="pt" aria-pressed="true">PT</button>
     <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -102,7 +116,9 @@
     <span class="label-dark">dark mode</span>
     <span class="label-light">light mode</span>
   </button>
-  </div>
+      </div>
+    </nav>
+  </header>
 
   <noscript>Este site necessita de JavaScript para funcionar corretamente.</noscript>
 
@@ -112,7 +128,7 @@
 
       <!-- Sidebar -->
       <div class="col-lg-4">
-        <div class="card profile-card p-3">
+        <div class="card profile-card p-3" id="sobre">
           <div class="text-center">
             <div class="avatar-orbit">
               <span class="orbit-dot" aria-hidden="true"></span>
@@ -182,7 +198,7 @@
 
       <!-- Conteúdo principal -->
       <div class="col-lg-8 d-lg-flex flex-lg-column">
-        <div class="card projects-card story-card p-3 p-md-4 mb-4">
+        <div class="card projects-card story-card p-3 p-md-4 mb-4" id="trajetoria">
           <span data-i18n="t387" class="kicker">2023 a 2026</span>
           <h4 data-i18n="t388" class="mb-1">Minha Trajetória</h4>
 
@@ -217,13 +233,12 @@
           <div class="contribution-text">
             <p data-i18n="t429">Durante a graduação, também fui diretora de esportes da AAA Fatec SJC, a Associação Atlética Acadêmica da Faculdade de Tecnologia de São José dos Campos. Joguei vôlei feminino nos campeonatos Interbixos e CVU, disputando contra outras faculdades da cidade. A atlética foi um ótimo espaço para exercer a colaboração e fortalecer o vínculo entre os alunos e a comunidade acadêmica.</p>
           </div>
-
-          <p class="journey-next"><i class="bi bi-arrow-down-circle" aria-hidden="true"></i><span data-i18n="t400">E, no centro de tudo isso, estavam os projetos: seis semestres, seis projetos e três papéis diferentes no Scrum (Product Owner, desenvolvedora e Scrum Master). A seguir, conto o que construí em cada um deles.</span></p>
         </div>
 
-        <div class="card projects-card p-3 p-md-4 mb-4">
+        <div class="card projects-card p-3 p-md-4 mb-4" id="projetos">
           <span data-i18n="t043" class="kicker">fatec sjc · 2024 a 2026</span>
-          <h4 data-i18n="t044" class="mb-3">Meus Projetos</h4>
+          <h4 data-i18n="t044" class="mb-1">Meus Projetos</h4>
+          <p data-i18n="t400" class="projects-intro">Um projeto por semestre, com clientes reais e diferentes papéis no time.</p>
 
           <div class="accordion" id="semestersAccordion">
 
@@ -868,7 +883,7 @@
         </div>
 
         <!-- Como saio da Fatec -->
-        <div class="card projects-card p-3 p-md-4 mb-4">
+        <div class="card projects-card p-3 p-md-4 mb-4" id="como-saio">
           <span data-i18n="t423" class="kicker">fatec sjc · 2026</span>
           <h4 data-i18n="t385" class="mb-3">Como saio da Fatec</h4>
           <div class="contribution-text">
@@ -879,7 +894,7 @@
         </div>
 
         <!-- Agradecimentos -->
-        <div class="card projects-card closing-card p-3 p-md-4 mb-0 flex-lg-grow-1">
+        <div class="card projects-card closing-card p-3 p-md-4 mb-0 flex-lg-grow-1" id="agradecimentos">
           <span data-i18n="t433" class="kicker">gratidão</span>
           <h4 data-i18n="t432" class="mb-3">Agradecimentos</h4>
           <div class="contribution-text">
@@ -978,6 +993,43 @@
           try { localStorage.setItem('lang', next); } catch (e) {}
         });
       });
+    })();
+  </script>
+
+  <!-- Menu: abrir/fechar no celular e destacar a seção visível -->
+  <script>
+    (function () {
+      var toggle = document.getElementById('navToggle');
+      var links = document.getElementById('navLinks');
+      var nav = document.querySelector('.site-nav');
+      function close() {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      links.addEventListener('click', function (e) { if (e.target.closest('a')) close(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+      var anchors = Array.prototype.slice.call(links.querySelectorAll('a'));
+      var sections = anchors.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+      function spy() {
+        var line = window.innerHeight * 0.3;
+        var current = 0;
+        sections.forEach(function (s, i) { if (s && s.getBoundingClientRect().top <= line) current = i; });
+        var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+        if (window.scrollY < 80) current = 0;
+        if (atBottom) current = sections.length - 1;
+        anchors.forEach(function (a, i) {
+          if (i === current) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      }
+      window.addEventListener('scroll', spy, { passive: true });
+      window.addEventListener('resize', spy);
+      spy();
     })();
   </script>
 

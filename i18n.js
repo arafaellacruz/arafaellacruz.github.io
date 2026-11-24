@@ -272,7 +272,7 @@ window.I18N_EN = {
  "t397": "AlgLog, the support guide I wrote for the students. Click the cover to download it.",
  "t398": "Teaching what I had learned only a short time before made me understand the concepts more deeply and explain the same idea in several different ways, until I found the one that made sense to each student.",
  "t399": "How I got to Fatec",
- "t400": "And at the heart of it all were the projects: six semesters, six projects and three different Scrum roles (Product Owner, developer and Scrum Master). Below, I share what I built in each one.",
+ "t400": "One project per semester, with real clients and different roles on the team.",
  "t401": "Download PDF",
  "t402": "Grateful for every choice, abundance in every drop.",
  "t403": "Designed and developed by Rafaella Cruz",
@@ -305,5 +305,10 @@ window.I18N_EN = {
  "t430": "Before Fatec, I trained as an Administration technician at CEPHAS and as a Junior Full-Stack Web Developer through Generation Brazil's tech bootcamp.",
  "t431": "Since March 2026, I've been a Software Developer at Ericsson, working in Research and Development of Artificial Intelligence solutions. I build intelligent agents and the infrastructure behind them: personas, modular skills, integrations through the Model Context Protocol (MCP) and GraphRAG architectures for contextual knowledge retrieval. This is where I now apply what I learned in my degree, such as Akpedia's semantic search, which connects directly to my work with RAG.",
  "t432": "Acknowledgments",
- "t433": "gratitude"
+ "t433": "gratitude",
+ "t434": "About me",
+ "t435": "Journey",
+ "t436": "Projects",
+ "t437": "Moving on",
+ "t438": "Acknowledgments"
 };

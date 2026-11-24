@@ -224,15 +224,139 @@ body > .container {
   100% { opacity: 0;    transform: translate(var(--dx), var(--dy)) scale(0.2) rotate(120deg); }
 }
 
-/* ---------- controles do topo (idioma + tema) ---------- */
-.top-controls {
+/* ---------- menu fixo (seções + idioma + tema) ---------- */
+html { scroll-padding-top: 96px; }
+
+.site-header {
   position: fixed;
-  top: 18px;
-  right: 18px;
-  z-index: 10;
+  top: 14px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.site-nav {
+  pointer-events: auto;
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  padding: 0.45rem 0.55rem 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: var(--shadow);
+}
+
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-brand-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 8px var(--pink);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease;
+}
+
+.nav-links a:hover { color: var(--text); background: var(--tint); }
+.nav-links a:focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; }
+
+.nav-links a[aria-current="true"] {
+  color: var(--accent);
+  background: var(--tint-strong);
+}
+
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible { outline: 2px solid var(--pink); }
+
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+/* dentro da barra, os botões não precisam de vidro próprio */
+.top-controls .lang-toggle,
+.top-controls .theme-toggle {
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: var(--tint);
+}
+
+/* telas médias: esconde o texto do botão de tema para caber */
+@media (max-width: 1199px) {
+  .theme-toggle .label-dark,
+  .theme-toggle .label-light { display: none !important; }
+}
+
+/* celular e tablet: links viram um menu suspenso */
+@media (max-width: 991px) {
+  .top-controls { order: 2; margin-left: auto; }
+  .nav-toggle { display: inline-flex; order: 3; margin-left: 0; }
+  .site-nav { border-radius: 22px; flex-wrap: wrap; }
+  .nav-links {
+    order: 4;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0.35rem 0 0.2rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--hairline);
+  }
+  .site-nav.open .nav-links { display: flex; }
+  .site-nav.open { background: var(--glass-strong); backdrop-filter: blur(28px) saturate(160%); -webkit-backdrop-filter: blur(28px) saturate(160%); }
+  .nav-links a { padding: 0.6rem 0.8rem; font-size: 0.95rem; }
 }
 
 .lang-toggle {
@@ -316,14 +440,21 @@ body > .container {
   overflow: hidden;
 }
 
+/* linha em gradiente no topo dos cards: é uma "borda" que herda o
+   arredondamento do card, então acompanha a curva dos cantos */
 .profile-card::before,
-.projects-card::before {
+.projects-card::before,
+.site-footer::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
-  border-radius: var(--radius) var(--radius) 0 0;
+  inset: 0;
+  border-radius: inherit;
+  padding-top: 3px;
   background: linear-gradient(90deg, var(--pink), var(--violet), var(--cyan));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  pointer-events: none;
 }
 
 .projects-card { position: relative; }
@@ -840,13 +971,7 @@ body > .container {
   gap: 0.4rem 1.5rem;
 }
 
-.site-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--pink), var(--violet), var(--cyan));
-}
+.site-footer::before { padding-top: 2px; }
 
 .footer-quote {
   display: inline-flex;
@@ -941,37 +1066,15 @@ body > .container {
   .skill-level-list li { padding: 0.55rem 0.8rem; font-size: 0.88rem; }
   .skills-header, .skills-more summary { padding-left: 0.8rem; padding-right: 0.8rem; }
   .skills-more > .contribution-text { padding: 0.25rem 0.8rem 0.9rem; }
-  .top-controls { top: 12px; right: 12px; }
 }
 
 /* selos dentro de cards (que são flex column no Bootstrap) não devem esticar */
 .card > .role-badge { align-self: flex-start; }
 
-/* transição do card "Minha Trajetória" para os projetos */
-.journey-next {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
-  margin: 1.5rem 0 0;
-  padding-top: 1.1rem;
-  border-top: 1px solid var(--hairline);
-  color: var(--text);
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.journey-next i {
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-  font-size: 1.15rem;
-  color: var(--accent);
-  animation: nudge 2.4s ease-in-out infinite;
-}
-
-@keyframes nudge { 50% { transform: translateY(3px); } }
-
-@media (prefers-reduced-motion: reduce) {
-  .journey-next i { animation: none; }
+/* frase de abertura do card "Meus Projetos" */
+.projects-intro {
+  color: var(--muted);
+  margin-bottom: 1.1rem;
 }
 
 /* vídeo incorporado (16:9) */

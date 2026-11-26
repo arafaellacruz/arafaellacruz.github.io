@@ -299,9 +299,9 @@ window.I18N_EN = {
  "t424": "Akpedia closed a journey that began with a terminal calculator in the 1st semester. Across six projects, I was Product Owner in the first and the last, a developer in the 2nd, 3rd and 5th and Scrum Master in the 4th, and I leave Fatec understanding a system as a whole: from data in the database to the screen, from the team's process to the client's needs and the legal obligations of anyone who holds other people's data.",
  "t425": "Special thanks to my group of project teammates and friends: <strong>Carlos Daniel</strong>, <strong>Felipe Reis</strong>, <strong>Mariana Oliveira</strong> and <strong>Matheus Marciano</strong>.",
  "t426": "And to professors <strong>Adriana Silva</strong>, <strong>Carlos Garcia</strong>, <strong>Diogo Branquinho</strong>, <strong>Emanuel Mineda</strong>, <strong>Fernando Masanori</strong> and our program coordinator and professor <strong>Fabiano Sabha</strong>: you also helped me get here, with lessons, conversations, tough love, support and understanding. You have no idea how much positive impact you have on your students. You change lives. Gratitude.",
- "t427": "Athletics Association",
- "t428": "AAA Fatec SJC · <strong>Sports Director</strong>",
- "t429": "During my degree, I was also the sports director of AAA Fatec SJC, the Academic Athletics Association of Fatec São José dos Campos. I played women's volleyball in the Interbixos and CVU championships, competing against other colleges in the city. The athletics association was a great place to practice collaboration and strengthen the bond between students and the academic community.",
+ "t427": "Athletics and Volleyball",
+ "t428": "AAA Fatec SJC · <strong>Sports Director</strong> · Women's volleyball",
+ "t429": "During my degree, I was the sports director of AAA Fatec SJC, the Academic Athletics Association of Fatec São José dos Campos, and a player on the women's volleyball team. In 2026, we competed in Interbixos, alongside other colleges such as ITA and Unifesp, and in CVU, the University Volleyball Championship, where we took 3rd place by beating ITA. The athletics association was a great place to practice collaboration and strengthen the bond between students and the academic community.",
  "t430": "Before Fatec, I trained as an Administration technician at CEPHAS and as a Junior Full-Stack Web Developer through Generation Brazil's tech bootcamp.",
  "t431": "Since March 2026, I've been a Software Developer at Ericsson, working in Research and Development of Artificial Intelligence solutions. I build intelligent agents and the infrastructure behind them: personas, modular skills, integrations through the Model Context Protocol (MCP) and GraphRAG architectures for contextual knowledge retrieval. This is where I now apply what I learned in my degree, such as Akpedia's semantic search, which connects directly to my work with RAG.",
  "t432": "Acknowledgments",
@@ -316,5 +316,18 @@ window.I18N_EN = {
   "alt": "Steam Ducks logo: a slash and a yellow duck"
  },
  "t441": "Since the first semester, I have been part of <a href=\"https://github.com/Steam-Ducks\" target=\"_blank\" rel=\"noopener noreferrer\">Steam Ducks</a>, the team I built my Fatec projects with. The group's entire visual identity was created by me, from the logo to every visual element that represents the team.",
- "t442": "The name has “ducks” in it for two reasons: I love ducks, and in programming there is the <em>rubber duck debugging</em> technique, where you explain your code, line by line, to a rubber duck until you find the bug. That is also why I chose a yellow duck as the icon for this portfolio."
+ "t442": "The name has “ducks” in it for two reasons: I love ducks, and in programming there is the <em>rubber duck debugging</em> technique, where you explain your code, line by line, to a rubber duck until you find the bug. That is also why I chose a yellow duck as the icon for this portfolio.",
+ "t443": "Programming Marathon",
+ "t444": "11th Internal Marathon · Fatec SJC · <strong>Apr 2024</strong>",
+ "t445": "In my very first semester, I took part in my first programming marathon, the 11th internal marathon at Fatec São José dos Campos, on team Pythicipantes, alongside my classmates Davi Soares and Isabelly Sousa. It was an exciting challenge and a great way to learn and collaborate right at the start of the program. <a href=\"https://www.linkedin.com/posts/cruz-rafaella_no-%C3%BAltimo-s%C3%A1bado-2004-tive-a-oportunidade-activity-7188394392896909312-HxLC\" target=\"_blank\" rel=\"noopener noreferrer\">See the post</a>.",
+ "t446": {
+  "alt": "Fatec São José dos Campos women's volleyball team with their 3rd place medals at CVU 2026"
+ },
+ "t447": "The team on the day we took 3rd place at CVU 2026, against ITA.",
+ "t448": "Beyond the classroom",
+ "t449": "If I could give one piece of advice to anyone starting at Fatec, it would be: <mark class=\"highlight\">get involved</mark>. The marathon, the teaching assistant role and the athletics association brought me closer to students from other classes and to professors I might never have met in the classroom alone. It was in these spaces that I built a large part of my network and learned to collaborate with people very different from me, and many of those connections are still with me today.",
+ "t450": {
+  "alt": "Fatec's 11th Internal Programming Marathon card featuring team Pythicipantes: Davi Soares, Isabelly Sousa and Rafaella Cruz"
+ },
+ "t451": "Team Pythicipantes at Fatec's 11th Internal Programming Marathon."
 };

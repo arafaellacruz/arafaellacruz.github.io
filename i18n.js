@@ -310,5 +310,11 @@ window.I18N_EN = {
  "t435": "Journey",
  "t436": "Projects",
  "t437": "Moving on",
- "t438": "Acknowledgments"
+ "t438": "Acknowledgments",
+ "t439": "Steam Ducks",
+ "t440": {
+  "alt": "Steam Ducks logo: a slash and a yellow duck"
+ },
+ "t441": "Since the first semester, I have been part of <a href=\"https://github.com/Steam-Ducks\" target=\"_blank\" rel=\"noopener noreferrer\">Steam Ducks</a>, the team I built my Fatec projects with. The group's entire visual identity was created by me, from the logo to every visual element that represents the team.",
+ "t442": "The name has “ducks” in it for two reasons: I love ducks, and in programming there is the <em>rubber duck debugging</em> technique, where you explain your code, line by line, to a rubber duck until you find the bug. That is also why I chose a yellow duck as the icon for this portfolio."
 };

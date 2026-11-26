@@ -302,7 +302,7 @@ window.I18N_EN = {
  "t427": "Athletics and Volleyball",
  "t428": "AAA Fatec SJC · <strong>Sports Director</strong> · Women's volleyball",
  "t429": "During my degree, I was the sports director of AAA Fatec SJC, the Academic Athletics Association of Fatec São José dos Campos, and a player on the women's volleyball team. In 2026, we competed in Interbixos, alongside other colleges such as ITA and Unifesp, and in CVU, the University Volleyball Championship, where we took 3rd place by beating ITA. The athletics association was a great place to practice collaboration and strengthen the bond between students and the academic community.",
- "t430": "Before Fatec, I trained as an Administration technician at CEPHAS and as a Junior Full-Stack Web Developer through Generation Brazil's tech bootcamp.",
+ "t430": "Before Fatec, I trained as an Administration technician at <a href=\"https://cephas.org.br/\" target=\"_blank\" rel=\"noopener noreferrer\">CEPHAS</a> and as a Junior Full-Stack Web Developer through <a href=\"https://brazil.generation.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Generation Brazil</a>'s tech bootcamp.",
  "t431": "Since March 2026, I've been a Software Developer at Ericsson, working in Research and Development of Artificial Intelligence solutions. I build intelligent agents and the infrastructure behind them: personas, modular skills, integrations through the Model Context Protocol (MCP) and GraphRAG architectures for contextual knowledge retrieval. This is where I now apply what I learned in my degree, such as Akpedia's semantic search, which connects directly to my work with RAG.",
  "t432": "Acknowledgments",
  "t433": "gratitude",

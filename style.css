@@ -1148,7 +1148,13 @@ html { scroll-padding-top: 96px; }
 
 .team-logo:hover { transform: rotate(-4deg) scale(1.04); box-shadow: var(--glow); }
 .team-logo img { width: 100%; height: 100%; object-fit: cover; }
-.team-identity .contribution-text a { color: var(--accent); font-weight: 600; }
+.contribution-text a {
+  color: var(--accent);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.contribution-text a:hover { text-decoration-thickness: 2px; }
 
 @media (max-width: 576px) {
   .team-identity { flex-direction: column; align-items: center; }
